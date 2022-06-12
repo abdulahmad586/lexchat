@@ -18,6 +18,8 @@ Example: @JohnDoe Hello John how are you doing today?
 COMMANDS
 Always precede commands with a colon (:), these are the available list of commands
 
+    node app.js
+    
     :logout // to logout from the server
     :users // to get a list of users that are online
     :help // to print this help page
