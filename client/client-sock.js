@@ -13,7 +13,7 @@ class ClientSock extends EventEmitter {
                 SocketUtils.sendMessage(mainContext.username, this.sSock);
             })
             .on('data', (data) => {
-                data = data.toString();
+                
                 this.emit('serverdata', data);
             })
             .on('error', err => {

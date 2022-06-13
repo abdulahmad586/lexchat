@@ -1,6 +1,6 @@
 class Constants {
 
-    static welcomeMessage(str){
+    static welcomeMessage(str) {
         return `******************\n*      WELCOME TO LEXCHAT      *\n******************
         ${str}`;
     }
@@ -32,21 +32,25 @@ Always precede commands with a colon (:), these are the available list of comman
 
     `;
 
+    static FILE_TRANSFER_DELIM = ":FILE_BUFFER";
+    static FILE_TRANSFER_UNAME_DELIM = "|";
+
     static ConnectionType = {
-        SERVER:1,
-        CLIENT:2
+        SERVER: 1,
+        CLIENT: 2
     }
 
     static MessageType = {
-        COMMAND:1,//starts with an *
-        MSG_BROADCAST:2,//normal text
-        MSG_PRIVATE:3,//starts with @ followed by the persons name
+        COMMAND: 1,//starts with an *
+        MSG_BROADCAST: 2,//normal text
+        MSG_PRIVATE: 3,//starts with @ followed by the persons name
     }
-    
+
     static User = {
-        name:'Anon_'+Date.now().toString().substr(5, 10),
-        socket:null,
-        loginTime:null,
+        name: 'Anon_' + Date.now().toString().substr(5, 10),
+        color:null,
+        socket: null,
+        loginTime: null,
     };
 
     static Message = {
@@ -55,6 +59,21 @@ Always precede commands with a colon (:), these are the available list of comman
         type: null,
         content: null,
         time: null,
+    }
+
+    static CONSOLE_COLORS = {
+        Red: "\x1b[31m",
+        Green:"\x1b[32m",
+        Yellow:"\x1b[33m",
+        Blue:"\x1b[34m",
+        Magenta:"\x1b[35m",
+        Cyan:"\x1b[36m",
+        White:"\x1b[37m",
+    };
+
+    static generateRandomColor(){
+        const colors = Object.keys(this.CONSOLE_COLORS);
+        return this.CONSOLE_COLORS[colors[Math.floor(Math.random()*colors.length)]];
     }
 
 }

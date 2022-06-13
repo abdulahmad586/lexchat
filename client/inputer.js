@@ -19,6 +19,16 @@ class Inputer extends EventEmitter {
             this._getInput();
         });
     }
+
+    reinitReadline(){
+        this.rl.close();
+        this.rl = Readline.createInterface({
+            input: process.stdin,
+            output: process.stdout
+        });
+        this._getInput();
+    }
+
 }
 
 module.exports = Inputer;
