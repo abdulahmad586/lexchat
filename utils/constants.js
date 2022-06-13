@@ -70,7 +70,7 @@ Always precede commands with a colon (:), these are the available list of comman
         Cyan:"\x1b[36m",
         White:"\x1b[37m",
     };
-
+    
     static generateRandomColor(){
         const colors = Object.keys(this.CONSOLE_COLORS);
         return this.CONSOLE_COLORS[colors[Math.floor(Math.random()*colors.length)]];

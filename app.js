@@ -4,7 +4,7 @@ const ResponseGetter = require('./utils/response_getter');
 const SocketUtils = require('./utils/utils');
 const Constants = require('./utils/constants');
 
-SocketUtils.write("Welcome to LexChat App\n\nYou may either run this app as a \x1b[1mserver\x1b[0m or join another server as a \x1b[1mclient\x1b[0m\n");
+SocketUtils.write("*Welcome to LexChat App\n\nYou may either run this app as a \x1b[1mserver\x1b[0m or join another server as a \x1b[1mclient\x1b[0m\n");
 
 responseGetter = new ResponseGetter();
 mainContext = this;
